@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  go:
+    container_name: go-devcontainer
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/workspace
+      - go_modules:/go/pkg
+    ports:
+      - 8080:8080
+    tty: true
+    environment:
+      - GO111MODULE=on
+    working_dir: /workspace
+
+volumes:
+  go_modules:

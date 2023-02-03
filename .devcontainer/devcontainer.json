@@ -1,0 +1,14 @@
+{
+	"name": "uploader-v2",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "go",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go"
+			]
+		}
+	},
+	"remoteUser": "vscode"
+}
